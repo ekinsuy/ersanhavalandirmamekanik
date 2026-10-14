@@ -1101,4 +1101,57 @@ section {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
     }
+    
+/* MOBİLDE ÜST BİLGİ ÇUBUĞUNU GÖSTER */
+@media screen and (max-width: 768px) {
+    .top-bar {
+        display: block !important;
+        width: 100%;
+        height: auto;
+        padding: 8px 0;
+        overflow: visible;
+    }
+
+    .top-bar-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .contact-info,
+    .social-links {
+        display: flex !important;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-info span,
+    .social-links a {
+        font-size: 11px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .whatsapp-button {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
 }
