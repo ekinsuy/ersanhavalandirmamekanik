@@ -79,6 +79,9 @@
             <a href="#" class="nav-link" onclick="showPage('services-page'); return false;">
                 Hizmetlerimiz
             </a>
+            <a href="#" class="nav-link" onclick="showPage('products-page'); return false;">
+                Ürünlerimiz
+            </a>
 
             <a href="#" class="nav-link" onclick="showPage('projects-page'); return false;">
                 Referanslarımız
@@ -570,6 +573,128 @@
 
     </main>
 
+    <!-- ÜRÜNLERİMİZ -->
+    <main id="products-page" class="page-view">
+
+        <div class="page-header">
+            <div class="container">
+                <button class="btn-back" type="button" onclick="showPage('home-page')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Ana Sayfaya Dön
+                </button>
+
+                <h1>Ürünlerimiz</h1>
+                <p>Havalandırma ve iklimlendirme sistemleri için profesyonel ürün çözümleri.</p>
+            </div>
+        </div>
+
+        <section class="page-content">
+            <div class="container">
+
+                <div class="section-title">
+                    <span class="section-subtitle">ERSAN HVAC</span>
+                    <h2>Ürün Gruplarımız</h2>
+                </div>
+
+                <div class="products-grid">
+
+                    <article class="product-card">
+                        <div class="product-icon">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Hava Kanalları</h3>
+                            <p>Prizmatik ve spiral hava kanalları, galvaniz sac kanal sistemleri ve izolasyonlu kanal
+                                çözümleri.</p>
+                            <a href="#" class="product-link" onclick="showPage('contact-page'); return false;">
+                                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-icon">
+                            <i class="fa-solid fa-fan"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Aspiratör ve Fanlar</h3>
+                            <p>Endüstriyel fanlar, aksiyal ve radyal fanlar, hücreli aspiratörler ve egzoz sistemleri.
+                            </p>
+                            <a href="#" class="product-link" onclick="showPage('contact-page'); return false;">
+                                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-icon">
+                            <i class="fa-solid fa-temperature-half"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Klima Santralleri</h3>
+                            <p>Ticari ve endüstriyel alanlara yönelik klima santralleri ve taze hava çözümleri.</p>
+                            <a href="#" class="product-link" onclick="showPage('contact-page'); return false;">
+                                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-icon">
+                            <i class="fa-solid fa-grip"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Menfez ve Difüzörler</h3>
+                            <p>İç mekânlarda dengeli hava dağıtımı sağlayan menfez ve difüzör seçenekleri.</p>
+                            <a href="#" class="product-link" onclick="showPage('contact-page'); return false;">
+                                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-icon">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>VRF / VRV Sistemleri</h3>
+                            <p>Ticari binalar ve büyük alanlar için iklimlendirme sistemleri.</p>
+                            <a href="#" class="product-link" onclick="showPage('contact-page'); return false;">
+                                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-icon">
+                            <i class="fa-solid fa-filter"></i>
+                        </div>
+                        <div class="product-info">
+                            <h3>Filtreler ve Aksesuarlar</h3>
+                            <p>Havalandırma ve iklimlendirme sistemlerine yönelik filtre ve yardımcı ekipmanlar.</p>
+                            <a href="#" class="product-link" onclick="showPage('contact-page'); return false;">
+                                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="products-cta">
+                    <h2>Projeniz için teklif alın</h2>
+                    <p>İhtiyacınıza uygun ürün ve sistemler hakkında bilgi almak için bizimle iletişime geçin.</p>
+                    <button class="btn btn-primary" type="button" onclick="showPage('contact-page')">
+                        İletişime Geç
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <!-- ÜRÜNLERİMİZ BİTİŞ -->
+
+
     <!-- HAKKIMIZDA -->
     <main id="about-page" class="page-view">
 
@@ -664,18 +789,28 @@
                         </div>
                     </div>
 
-                    <form class="contact-form" id="contactForm">
+
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/ramokisisel06@gmail.com"
+                        method="POST">
                         <h3>Teklif Formu</h3>
 
                         <input type="text" name="name" placeholder="Adınız Soyadınız" autocomplete="name" required>
 
                         <input type="email" name="email" placeholder="E-posta Adresiniz" autocomplete="email" required>
 
-                        <input type="tel" name="phone" placeholder="Telefon Numaranız" autocomplete="tel">
+                        <input type="tel" name="phone" placeholder="Telefon Numaranız" autocomplete="tel" required>
 
                         <textarea name="message" rows="4" placeholder="Projeniz veya mesajınız..." required></textarea>
 
-                        <button type="submit" class="btn btn-primary">Gönder</button>
+                        <input type="hidden" name="_subject" value="Ersan Group - Yeni Teklif Talebi">
+
+                        <button type="submit" class="btn btn-primary">
+                            Teklif Talebini Gönder
+                        </button>
+
+                        <button type="button" class="btn btn-primary" id="whatsappQuoteBtn">
+                            WhatsApp ile Teklif İste
+                        </button>
                     </form>
 
                 </div>
