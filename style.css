@@ -1101,57 +1101,255 @@ section {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
     }
-    
-/* MOBİLDE ÜST BİLGİ ÇUBUĞUNU GÖSTER */
-@media screen and (max-width: 768px) {
-    .top-bar {
-        display: block !important;
-        width: 100%;
-        height: auto;
-        padding: 8px 0;
-        overflow: visible;
+
+    /* MOBİLDE ÜST BİLGİ ÇUBUĞUNU GÖSTER */
+    @media screen and (max-width: 768px) {
+        .top-bar {
+            display: block !important;
+            width: 100%;
+            height: auto;
+            padding: 8px 0;
+            overflow: visible;
+        }
+
+        .top-bar-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .contact-info,
+        .social-links {
+            display: flex !important;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 8px 12px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .contact-info span,
+        .social-links a {
+            font-size: 11px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .whatsapp-button {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
-    .top-bar-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
+}
 
-    .contact-info,
-    .social-links {
-        display: flex !important;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 8px 12px;
-        width: 100%;
-        text-align: center;
-    }
+/* =========================
+   ERSAN GROUP - ÜRÜNLERİMİZ
+========================= */
 
-    .contact-info span,
-    .social-links a {
-        font-size: 11px;
-        line-height: 1.5;
-        overflow-wrap: anywhere;
-    }
+.products-section {
+    padding: 50px 0 70px;
+    background: var(--white);
+}
 
-    .social-links a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 4px;
-    }
+.products-section .section-title>p {
+    color: var(--gray);
+    margin-top: 12px;
+}
 
-    .whatsapp-button {
-        display: inline-flex !important;
-        align-items: center;
-        justify-content: center;
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    background: var(--light);
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+.product-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: var(--white);
+    color: var(--primary-dark);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.product-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--dark);
+}
+
+.product-info p {
+    margin-bottom: 20px;
+    color: var(--gray);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.product-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
+    padding: 11px 18px;
+    border-radius: 6px;
+    background: #16834a;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.product-button:hover {
+    background: #10683a;
+    color: var(--white);
+}
+
+.products-contact {
+    margin-top: 45px;
+    padding: 35px 20px;
+    text-align: center;
+    background: var(--light);
+    border-radius: 10px;
+}
+
+.products-contact h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--dark);
+}
+
+.products-contact p {
+    margin-bottom: 20px;
+    color: var(--gray);
+}
+
+.products-contact .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
     }
 }
+
+/* Mobil */
+@media (max-width: 768px) {
+    .products-section {
+        padding: 35px 0 45px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .product-image {
+        height: 165px;
+    }
+
+    .product-info {
+        padding: 15px;
+    }
+
+    .product-info h3 {
+        font-size: 0.98rem;
+    }
+
+    .product-info p {
+        font-size: 0.84rem;
+    }
+
+    .product-button {
+        width: 100%;
+        padding: 11px 8px;
+        font-size: 0.82rem;
+    }
+
+    .products-contact h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Küçük telefonlar */
+@media (max-width: 380px) {
+    .products-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .product-image {
+        height: 220px;
+    }
+
+    .product-info {
+        padding: 20px;
+    }
 }
